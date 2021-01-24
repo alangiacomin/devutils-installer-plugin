@@ -12,7 +12,7 @@ class DevUtilsInstaller extends LibraryInstaller
    */
   public function getInstallPath(PackageInterface $package)
   {
-    if ($this->extractPrefix($package) !== 'alangiacomin/devutils-') {
+    if ($this->extractPrefix($package) !== 'alangiacomin/devutils') {
       throw new \InvalidArgumentException(
         'Unable to install utility, developer utilities '
           . 'should always start their package name with '
@@ -25,12 +25,12 @@ class DevUtilsInstaller extends LibraryInstaller
 
   protected function extractPrefix(PackageInterface $package)
   {
-    return substr($package->getPrettyName(), 0, 22);
+    return substr($package->getPrettyName(), 0, 21);
   }
 
   protected function extractShortName(PackageInterface $package)
   {
-    return substr($package->getPrettyName(), 22);
+    return substr($package->getPrettyName(), 21);
   }
 
   protected function getDevUtilsRootPath()
