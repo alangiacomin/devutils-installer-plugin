@@ -1,0 +1,26 @@
+{
+    "name": "alangiacomin/devutils-installer-plugin",
+    "type": "composer-plugin",
+    "description": "Dev shortcut commands (installer plugin)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Giacomin",
+            "email": "alan.giacomin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AG\\Composer\\": "src/Composer/"
+        }
+    },
+    "extra": {
+        "class": "AG\\Composer\\DevUtilsInstallerPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "^2.0.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    }
+}
